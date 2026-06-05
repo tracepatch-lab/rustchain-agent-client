@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rustchain-agent-client"
+version = "0.1.0"
+description = "Stdlib Python SDK and CLI for the RustChain RIP-302 Agent Economy API"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "tracepatch-lab" }]
+license = { text = "MIT" }
+keywords = ["rustchain", "rip-302", "agent-economy", "rtc", "cli"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Environment :: Console",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = []
+
+[project.scripts]
+rustchain-agent = "rustchain_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["rustchain_agent*"]
